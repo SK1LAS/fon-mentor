@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактор Обложек</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="editor">
+        <h1>РЕДАКТОР ОБЛОЖЕК В МЕНТОР</h1>
+        <div id="canvas" style="width: 720px; height: 480px; position: relative; border: 1px solid #000; background-size: cover; background-position: center;">
+            <div id="textOverlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: Impact; text-align: center; color: white; font-size: 48px;">
+                НАЗВАНИЕ ДИСЦИПЛИНЫ
+            </div>
+        </div>
+        <label for="backgrounds">Выберите фон:</label>
+        <select id="backgrounds">
+            <option value="">-- Выберите фон --</option>
+            <option value="assets/backgrounds/ИТСС_ОЧКА.jpg">ИТСС_О</option>
+            <option value="assets/backgrounds/ИТСС_ЗАОЧКА.jpg">ИТСС_З</option>
+            <option value="assets/backgrounds/ТОБ.jpg">ТОБ</option>
+            <option value="assets/backgrounds/ПО.jpg">ПО</option>
+            <option value="assets/backgrounds/ЗАПАС.jpg">ЗАПАС</option>
+        </select>
+        <input type="text" id="textInput" placeholder="Введите текст">
+        <button id="saveButton">Сохранить обложку</button>
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+        <script src="app.js"></script>
+    </div>
+</body>
+</html>
