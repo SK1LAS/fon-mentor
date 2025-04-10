@@ -1,11 +1,9 @@
 {
   "name": "fon-mentor",
   "version": "0.0.1",
+  "type": "commonjs",
   "scripts": {
     "start": "live-server src"
-  },
-  "dependencies": {
-    "html2canvas": "^1.4.1"
   },
   "devDependencies": {
     "live-server": "^1.2.2"
