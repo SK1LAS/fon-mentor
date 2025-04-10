@@ -1,0 +1,14 @@
+# Игнорировать все фотографии
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.svg
+
+# Исключить файл ЗАПАС.jpg
+!ЗАПАС.jpg
+
+# Игнорировать node_modules
+node_modules/
