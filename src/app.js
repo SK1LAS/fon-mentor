@@ -39,11 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Сохранение обложки в формате JPG
     saveButton.addEventListener("click", () => {
+        const text = textInput.value.trim(); // Получаем текст из редактора
+        const backgroundName = backgrounds.value.split('/').pop().split('.')[0]; // Извлекаем имя файла фона без расширения
+
+        const fileName = `${text || "default"}_${backgroundName || "background"}.jpg`; // Формируем имя файла
+
         html2canvas(canvas, {
             scale: 2 // Увеличиваем масштаб рендеринга
         }).then((canvasElement) => {
             const link = document.createElement("a");
-            link.download = "cover.jpg"; // Указываем формат JPG
+            link.download = fileName; // Устанавливаем имя файла
             link.href = canvasElement.toDataURL("image/jpeg", 0.95); // Сохраняем в JPG с качеством 95%
             link.click();
         });
